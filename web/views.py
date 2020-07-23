@@ -12,6 +12,8 @@ def login(request):
     if request.method=="POST":
         name=request.POST.get("name")
         password=request.POST.get("password")
-        print("name",name,"password",password)
+        baoliu=request.POST.get("baoliu")
+        print("name",name,"password",password,"Keep_account",Keep_account)
     error_msg = ""
-    return render(request, "login.html", {"error_msg": error_msg})
+    if request.POST.get("name")=="123":error_msg = "用户名密码错误!"
+    return render(request, "login/login.html", {"error_msg": error_msg})

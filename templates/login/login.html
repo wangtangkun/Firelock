@@ -1,0 +1,107 @@
+{% load static %}
+<html lang="en" class="login-content ng-scope" data-ng-app="materialAdmin"><head><style type="text/css">.ng-animate.item:not(.left):not(.right){-webkit-transition:0s ease-in-out left;transition:0s ease-in-out left}</style><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>Material Admin</title>
+{#    <script src="{% static 'login/js/pace.min.js' %}" charset="gbk"></script>#}
+<link href="{% static 'login/css/pace-theme-barber-shop.css' %}" rel="stylesheet">
+<script src="{% static 'login/js/jquery.min.js' %}"></script>
+<script src="{% static 'login/js/jquery.qrcode.min.js' %}"></script>
+    <link rel="Shortcut icon" href="//www.jq22.com/favicon.ico">
+<link rel="stylesheet" href="{% static 'login/plugins/bootstrap/css/bootstrap.min.css' %}">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="{% static 'login/plugins/font-awesome/css/font-awesome.min.css' %}">
+
+
+
+<link href="{% static 'login/font/iconfont.css' %}" rel="stylesheet" type="text/css">
+
+
+
+
+<link href="{% static 'login/css/material-design-iconic-font.min.css' %}" rel="stylesheet" type="text/css">
+
+<link href="{% static 'login/css/app.min.1.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body class="login-content ng-scope" data-ng-controller="loginCtrl as lctrl">
+<div class="lc-block toggled" id="l-login" data-ng-class="{'toggled':lctrl.login === 1}">
+<h1 class="lean">Azrael</h1>
+<div class="input-group m-b-20">
+<span class="input-group-addon">
+<i class="iconfont">&#xe60e;</i>
+</span>
+    <form action="" method="post">{% csrf_token %}
+
+<div class="fg-line">
+    <p><span style="color: red;font-size: 15px">{{ error_msg }}</span></p>
+<input type="text" name="name" autocomplete="off" class="form-control" placeholder="Username" regex="^\w{3,16}$">
+</div>
+</div>
+
+<div class="input-group m-b-20">
+<span class="input-group-addon">
+<i class="iconfont">&#xe6d5;</i>
+</span>
+<div class="fg-line">
+<input name="password" type="password" class="form-control" placeholder="Password" regex="^\w+">
+</div>
+</div>
+<div class="clearfix"></div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="Keep_account" value="yes">
+<i class="input-helper">
+记住用户名密码
+</i>
+</label>
+</div>
+<button href="" class="btn btn-login btn-danger btn-float">
+  <i class="glyphicon glyphicon-arrow-right"></i>
+</button>
+<ul class="login-navigation">
+<li class="bgm-red" data-ng-click="lctrl.login = 0; lctrl.register = 1">Register</li>
+<li data-block="#l-forget-password" class="bgm-orange" data-ng-click="lctrl.login = 0; lctrl.forgot = 1">Forgot Password?</li>
+</ul>
+</div>
+<!-- ngIf: lctrl.register === 1 -->
+<!-- ngIf: lctrl.forgot === 1 -->
+  </form>
+
+
+
+
+
+
+
+
+
+
+
+<script src="{% static 'login/js/jquery.min.js' %}"></script><script src="{% static 'login/js/jquery.min.js' %}"></script>
+
+<script src="{% static 'login/js/angular.min.js' %}"></script>
+<script src="{% static 'login/js/angular-resource.min.js' %}"></script>
+<script src="{% static 'login/js/angular-animate.min.js' %}"></script>
+
+<script src="{% static 'login/js/angular-ui-router.min.js' %}"></script>
+<script src="{% static 'login/js/loading-bar.js' %}"></script>
+<script src="{% static 'login/js/ocLazyLoad.min.js' %}"></script>
+<script src="{% static 'login/js/ui-bootstrap-tpls.min.js' %}"></script>
+
+<script src="{% static 'login/js/nouislider.min.js' %}"></script>
+<script src="{% static 'login/js/ng-table.min.js' %}"></script>
+
+{#<!--[if IE 9 ]>#}
+{#	    <script src="{% static 'login/js/jquery.placeholder.min.js' %}"></script>#}
+{#	<![endif]-->#}
+
+<script src="{% static 'login/js/app.js' %}"></script>
+<script src="{% static 'login/js/main.js' %}"></script>
+<script src="{% static 'login/js/ui-bootstrap.js' %}"></script>
+
+<script src="{% static 'login/js/form.js' %}"></script>
+{#<div id="qb-sougou-search" style="display: none; opacity: 0;"><p>搜索</p><p class="last-btn">复制</p><iframe src=""></iframe></div></body></html>#}
