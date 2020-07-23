@@ -16,4 +16,5 @@ def login(request):
         print("name",name,"password",password,"Keep_account",Keep_account)
     error_msg = ""
     if request.POST.get("name")=="123":error_msg = "用户名密码错误!"
+    #2123
     return render(request, "login/login.html", {"error_msg": error_msg})
